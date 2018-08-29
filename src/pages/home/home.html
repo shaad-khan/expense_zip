@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Continuserve Expense App</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2></h2>
+
+<!--<button (click)="getLocation()" ion-button mode="ios" round>Get geolocation</button>-->
+<!--  <button (click)="ofetch()" ion-button mode="ios" round>Get info</button>
+
+<!--
+  <div *ngIf="location">
+    <h2>Your location is:</h2>
+    <p>Lon: {{ location.longitude }} | Lat: {{ location.latitude }}</p>
+    <p></p>
+
+  </div>-->
+
+
+  <!--<img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">
+  <h3 [hidden]="lastImage !== null">Please Select Image!</h3>
+
+    <p *ngIf='fdata'>{{fdata[0].webDetection.webEntities[0].description}},{{fdata[0].webDetection.webEntities[1].description}}</p><!--{{fdata[0].webDetection.webEntities[2].description}},{{fdata[0].webDetection.webEntities[3].description}}</p>
+   <ion-list *ngIf='recom' >
+  <ion-item *ngFor="let item of recom.groups[0].items">
+    <ion-avatar item-start>
+      <img src="data:image/png;base64,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"/>
+    </ion-avatar>
+    <h2>{{item.venue.name}}</h2><h2>{{item.venue.location.address}}</h2>
+    <h3>{{item.venue.location.crossStreet}}</h3>
+   <!-- <p>I've had a pretty messed up day. If we just...</p>
+  </ion-item>
+</ion-list>-->
+
+<ion-card>
+<!--    <div id="container">-->
+  <ion-card-header>
+
+  <!--  <ion-label>Expense Form</ion-label>
+   <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>-->
+   <ion-grid>
+     <ion-row>
+       <ion-col col-10>
+        <ion-label>Expense Sheet Id : {{sheetid}}</ion-label>
+       </ion-col>
+       <ion-col col-2>
+      <ion-toggle [(ngModel)]="multi"></ion-toggle>
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+
+
+
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item  id="rounded">
+        <ion-label stacked>Approver</ion-label>
+        <ion-input type="text" name="expense" placeholder="{{approvername}}" disabled></ion-input>
+      </ion-item>
+      <ion-item  id="rounded">
+        <ion-label stacked>Project</ion-label>
+        <ion-select [(ngModel)]="project" >
+          <ion-option *ngFor="let c of pitems" value="{{c.Id}}">{{c.Name}}</ion-option>
+
+        </ion-select>
+      </ion-item>
+      <ion-item id="rounded">
+        <ion-label stacked>Purpose</ion-label>
+        <ion-textarea [(ngModel)]="purpose" placeholder="Please enter purpose here" required>
+        </ion-textarea>  </ion-item>
+  <ion-item  id="rounded">
+    <ion-label stacked>Expense Amount</ion-label>
+    <ion-input type="number" [(ngModel)]="expense" name="expense" placeholder="₹" (blur)="expenseval()"></ion-input>
+  </ion-item>
+  <ion-item id="rounded">
+    <ion-label stacked>Category</ion-label>
+    <ion-select [(ngModel)]="cat" (ngModelChange)="expenseval()">
+      <ion-option *ngFor="let c of citem" value="{{c.Id}}">{{c.Value}}</ion-option>
+
+    </ion-select>
+  </ion-item>
+  <ion-item id="rounded">
+    <!--<ion-label>Date</ion-label>
+ <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate">-->
+    <ion-label stacked>Start Date</ion-label>
+  <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="datesf" name="datesf" (ionChange)="validator()" placeholder="DD/MM/YYYY"></ion-datetime>
+  </ion-item>
+  <ion-item id="rounded">
+    <ion-label stacked>End Date</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="dateef" name="dateef" placeholder="DD/MM/YYYY"></ion-datetime>
+  </ion-item>
+  <ion-item id="rounded">
+    <ion-label stacked>Comments</ion-label>
+    <ion-textarea [(ngModel)]="comments" placeholder="Please enter comment here" required>
+    </ion-textarea>  </ion-item>
+</ion-list>
+    <ion-buttons>
+      <button ion-button icon-left (click)="presentActionSheet()">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    <!--<button ion-button icon-left (click)="uploadImage()" [disabled]="lastImage === null">
+        <ion-icon name="cloud-upload"></ion-icon>
+      </button>-->
+      <button ion-button icon-left (click)="uploadImage()" >
+        <ion-icon name="cloud-upload"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
+  </ion-card-content>
+<!--</div>-->
+</ion-card>
+
+
+
+</ion-content>
+
+<ion-footer>
+<!--  <ion-toolbar>
+<!--    <ion-buttons>
+      <button ion-button icon-left (click)="presentActionSheet()">
+        <ion-icon name="camera"></ion-icon>Select Image
+      </button>
+      <button ion-button icon-left (click)="uploadImage()" [disabled]="lastImage === null">
+        <ion-icon name="cloud-upload"></ion-icon>Upload
+      </button>
+    </ion-buttons>
+  </ion-toolbar>-->
+</ion-footer>

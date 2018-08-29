@@ -1,0 +1,6 @@
+<ion-tabs>{{message}}
+<!--  <ion-tab [root]="tabRoot" tabTitle="Login" tabIcon="Login"></ion-tab>-->
+  <ion-tab [root]="tab1Root" tabTitle="Apply" tabIcon="apps"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="My Approvals" tabIcon="ios-checkmark-circle-outline" *ngIf="flag"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Status" tabIcon="ios-list-box"></ion-tab>
+</ion-tabs>

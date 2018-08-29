@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+    Continuserve Expense App
+    </ion-title>
+
+  <!--  <ion-title>
+<img alt="logo" height="40"   src="../assets/imgs/download.jpeg" >
+</ion-title>-->
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <div id="container">
+     <ion-card>
+       <ion-card-content>
+<ion-list>
+
+  <ion-item id='rounded'>
+    <ion-label stacked>  <ion-icon name="contact"></ion-icon> UserName</ion-label>
+    <ion-input type="text" [(ngModel)]="UserName"></ion-input>
+  </ion-item>
+
+ <!-- <ion-item>
+    <ion-label></ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>-->
+
+  <ion-item id='rounded'>
+    <ion-label stacked> <ion-icon name="lock"></ion-icon> Password</ion-label>
+    <ion-input type="password" [(ngModel)]="Password"></ion-input>
+  </ion-item>
+
+
+
+<div padding>
+ <button ion-button color="default" round (click)="Mysearch()"><ion-icon name="power"></ion-icon>&nbsp;&nbsp;Login</button>
+</div>
+<!--<div *ngIf="location && option">
+{{lat}}   /   {{long}}
+</div>
+
+<ion-list *ngIf='recom' >
+  <ion-item *ngFor="let item of recom.groups[0].items">
+    <ion-avatar item-start>
+     <ion-icon ios="ios-compass" md="md-compass"></ion-icon>
+    </ion-avatar>
+    <h2>{{item.venue.name}}</h2><h2>{{item.venue.location.address}}</h2>
+    <h3>{{item.venue.location.crossStreet}}</h3>
+   <!-- <p>I've had a pretty messed up day. If we just...</p>
+  </ion-item>
+</ion-list>-->
+
+
+</ion-list>
+</ion-card-content>
+</ion-card>
+</div>
+</ion-content>

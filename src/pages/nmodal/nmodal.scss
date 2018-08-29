@@ -1,0 +1,18 @@
+page-modal {
+
+  ion-fab[right] {
+    right: 2px;
+  /*  right: calc(10px + constant(safe-area-inset-right));
+    right: calc(10px + env(safe-area-inset-right));*/
+}
+
+ion-fab[top] {
+    top: 2px;
+}
+/*  .card-header-md {
+      font-size: 1.6rem;
+      color: #fff;
+      padding: 16px;
+      background-color: hsl(0, 3%, 7%);
+  }*/
+}

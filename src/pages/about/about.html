@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Approvals
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <div padding>
+  <ion-segment [(ngModel)]="pet" (click)="status()">
+    <ion-segment-button value="Pending">
+      <ion-icon name="link"></ion-icon> Pending
+    </ion-segment-button>
+    <ion-segment-button value="Closed">
+    <ion-icon name="link"></ion-icon> Approved
+    </ion-segment-button>
+    <ion-segment-button value="Denied">
+  <ion-icon name="link"></ion-icon> Denied
+    </ion-segment-button>
+  </ion-segment>
+</div>
+  <ion-card>
+
+  <ion-card-header>
+    <ion-icon name="contact" item-start large></ion-icon>
+    {{user}}
+  </ion-card-header>
+
+
+</ion-card>
+  <ion-list *ngIf="recom">
+    <ion-item *ngFor="let item of recom | pipef : pet">
+ <ion-icon *ngIf="item.SheetStatus=='Pending'" ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline" style="color:#489cfc;" item-start></ion-icon>
+       <ion-icon *ngIf="item.SheetStatus=='Closed'" ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline" style="color: #83fc48;" item-start></ion-icon>
+       <ion-icon *ngIf="item.SheetStatus=='Denied'" ios="ios-close-circle" md="md-close-circle" style="color: #fc4848" item-start></ion-icon>
+
+       <!--  <h2>Employee ID: {{item.EmployeeID}}</h2>-->
+       <h1>Sheet Id:{{item.SheetName}}</h1>
+           <h2>Employee Name:{{item.CreatedBy}}</h2>
+           <p>Created On: {{item.CreatedOn | date}}</p>
+             <ion-badge color="secondary">Total Amt : ₹{{item.TotalAmount}}</ion-badge>
+          <!--<p>From Date : {{item.FromDate}} - To Date: {{item.ToDate}}</p>-->
+
+      <button ion-button clear item-end (click)="openModal1(item.Id)">View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

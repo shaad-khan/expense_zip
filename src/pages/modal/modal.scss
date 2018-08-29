@@ -1,0 +1,14 @@
+page-modal {
+  ion-fab[right] {
+    right: 2px;
+  /*  right: calc(10px + constant(safe-area-inset-right));
+    right: calc(10px + env(safe-area-inset-right));*/
+}
+
+ion-fab[top] {
+    top: 2px;
+}
+
+
+
+}
